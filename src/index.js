@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 import express from "express";
 import connectDB from "./db/index.js";
+import { app } from "./app.js";
 
 dotenv.config({
   path: "./env",
@@ -16,6 +17,7 @@ connectDB()
     console.log("mongodb connection failed!!!!", err);
   });
 
+export { app };
 //2nd approach
 //const app = express();
 /*async function connectDB() {
